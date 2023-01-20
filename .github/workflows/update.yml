@@ -15,13 +15,13 @@ jobs:
           git clone https://github.com/mcattin-Coexya/ansible-collection_webapp.git
           cd ansible-collection_webapp
           git submodule update --init --recursive
-          cd roles/nginx
+          cd roles/webapp
           git pull origin master
           cd ../..
           git add .
           git config --global user.email "mcattin"
           git config --global user.name "mcattin"
-          git commit -m "update role nginx commit ${{ github.sha }}"
+          git commit -m "update role webapp commit ${{ github.sha }}"
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
